@@ -14,3 +14,5 @@ I created an init function to make sure that if the page is left and revisted, o
 be reloaded into the proper fields.
 
 I utilized Moment JS to set up the date display, as well as change the color style of appointments, as they came up, or were passed.
+
+

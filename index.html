@@ -35,12 +35,12 @@
 <container id="space">
   
     <table id='main'>
-        <tr>
-            <td id="changer1">
+        <tr id="changer1">
+            <td>
                 <p>9 AM</p>
             </td>
 
-            <td id="changer1">
+            <td>
                 <input type='text' id='text1'>
             </td>
 
@@ -50,24 +50,26 @@
             
         </tr>
 
-        <tr>
-            <td id="changer2">
+        <tr id="changer2">
+            <td>
                 <p>10 AM</p>
             </td>
 
-            <td id="changer2">
+            <td>
                 <input type='text' id='text2'>
-            </td>   <button type="button" class="btn btn-primary" id='button2'>Save</button>
+            </td>   
+            <td>
+                <button type="button" class="btn btn-primary" id='button2'>Save</button>
             </td>
             
         </tr>
 
-        <tr>
-            <td id="changer3">
+        <tr id="changer3">
+            <td>
                 <p>11 AM</p>
             </td>
 
-            <td id="changer3">
+            <td>
                 <input type='text' id='text3'>
             </td>
 
@@ -77,12 +79,12 @@
             
         </tr>
 
-        <tr>
-            <td id="changer4">
+        <tr id="changer4">
+            <td>
                 <p>12 PM</p>
             </td>
 
-            <td id="changer4">
+            <td>
                 <input type='text' id='text4'>
             </td>
 
@@ -92,12 +94,12 @@
             
         </tr>
 
-        <tr>
-            <td id="changer5">
+        <tr id="changer5">
+            <td>
                 <p>1 PM</p>
             </td>
 
-            <td id="changer5">
+            <td>
                 <input type='text' id='text5'>
             </td>
 
@@ -107,12 +109,12 @@
             
         </tr>
 
-        <tr>
-            <td id="changer6">
+        <tr id="changer6">
+            <td>
                 <p>2 PM</p>
             </td>
 
-            <td id="changer6">
+            <td>
                 <input type='text' id='text6'>
             </td>
 
@@ -122,12 +124,12 @@
             
         </tr>
 
-        <tr>
-            <td id="changer7">
+        <tr id="changer7">
+            <td>
                 <p>3 PM</p>
             </td>
 
-            <td id="changer7">
+            <td>
                 <input type='text' id='text7'>
             </td>
 
@@ -137,12 +139,12 @@
             
         </tr>
 
-        <tr>
-            <td id="changer8">
+        <tr id="changer8">
+            <td>
                 <p>4 PM</p>
             </td>
 
-            <td id="changer8">
+            <td>
                 <input type='text' id='text8'>
             </td>
 
@@ -152,12 +154,12 @@
             
         </tr>
 
-        <tr>
-            <td id="changer9">
+        <tr id="changer9">
+            <td>
                 <p>5 PM</p>
             </td>
 
-            <td id="changer9">
+            <td>
                 <input type='text' id='text9'>
             </td>
 
@@ -191,42 +193,259 @@ init();
     
 var m = moment();
 
-var m9 = moment("09:00:00:00");
-
-var m10 = moment("10:00:00:00");
-
-var m11 = moment("11:00:00:00");
-
-var m12 = moment("12:00:00:00");
-
-var m1 = moment("13:00:00:00");
-
-var m2 = moment("14:00:00:00");
-
-var m3 = moment("15:00:00:00");
-
-var m4 = moment("16:00:00:00");
-
-var m5 = moment("17:00:00:00");
-
 var holder = document.querySelector('#timeHolder');
 
 var md = document.querySelector('#morrisDay');
 
 md.innerHTML = (m.format('dddd [,] MMMM Do YYYY'));
 
-function change1 () {
+ function change1 () {
 
-    if(moment() > moment("09:00:00:00") || moment() < moment("10:00:00:00")) {
+    var beginningTime = moment({
+    h:9
+});
 
-        $
+    var endTime = moment({
+        h:10
+    })
 
-    }
+  if(moment().isAfter(endTime)) {
+
+    document.querySelector("#changer1").style.backgroundColor = "grey";
+
+  } else if (moment().isBefore(beginningTime)) {
+
+    document.querySelector("#changer1").style.backgroundColor = "green";
+
+  } else if (moment().isBetween(beginningTime, endTime)) {
+
+    document.querySelector("#changer1").style.backgroundColor = "red";
+
+  }
+
+        
+};
+
+function change2 () {
+
+var beginningTime = moment({
+h:10
+});
+
+var endTime = moment({
+    h:11
+})
+
+if(moment().isAfter(endTime)) {
+
+document.querySelector("#changer2").style.backgroundColor = "grey";
+
+} else if (moment().isBefore(beginningTime)) {
+
+document.querySelector("#changer2").style.backgroundColor = "green";
+
+} else if (moment().isBetween(beginningTime, endTime)) {
+
+document.querySelector("#changer2").style.backgroundColor = "red";
 
 }
 
-console.log(m);
+    
+};
+function change3 () {
 
+var beginningTime = moment({
+h:11
+});
+
+var endTime = moment({
+    h:12
+})
+
+if(moment().isAfter(endTime)) {
+
+document.querySelector("#changer3").style.backgroundColor = "grey";
+
+} else if (moment().isBefore(beginningTime)) {
+
+document.querySelector("#changer3").style.backgroundColor = "green";
+
+} else if (moment().isBetween(beginningTime, endTime)) {
+
+document.querySelector("#changer3").style.backgroundColor = "red";
+
+}
+
+    
+};
+
+function change4 () {
+
+var beginningTime = moment({
+h:12
+});
+
+var endTime = moment({
+    h:13
+})
+
+if(moment().isAfter(endTime)) {
+
+document.querySelector("#changer4").style.backgroundColor = "grey";
+
+} else if (moment().isBefore(beginningTime)) {
+
+document.querySelector("#changer4").style.backgroundColor = "green";
+
+} else if (moment().isBetween(beginningTime, endTime)) {
+
+document.querySelector("#changer4").style.backgroundColor = "red";
+
+}
+
+    
+};
+
+function change5 () {
+
+var beginningTime = moment({
+h:13
+});
+
+var endTime = moment({
+    h:14
+})
+
+if(moment().isAfter(endTime)) {
+
+document.querySelector("#changer5").style.backgroundColor = "grey";
+
+} else if (moment().isBefore(beginningTime)) {
+
+document.querySelector("#changer5").style.backgroundColor = "green";
+
+} else if (moment().isBetween(beginningTime, endTime)) {
+
+document.querySelector("#changer5").style.backgroundColor = "red";
+
+}
+
+    
+};
+
+function change6 () {
+
+var beginningTime = moment({
+h:14
+});
+
+var endTime = moment({
+    h:15
+})
+
+if(moment().isAfter(endTime)) {
+
+document.querySelector("#changer6").style.backgroundColor = "grey";
+
+} else if (moment().isBefore(beginningTime)) {
+
+document.querySelector("#changer6").style.backgroundColor = "green";
+
+} else if (moment().isBetween(beginningTime, endTime)) {
+
+document.querySelector("#changer6").style.backgroundColor = "red";
+
+}
+
+    
+};
+
+function change7 () {
+
+var beginningTime = moment({
+h:15
+});
+
+var endTime = moment({
+    h:16
+})
+
+if(moment().isAfter(endTime)) {
+
+document.querySelector("#changer7").style.backgroundColor = "grey";
+
+} else if (moment().isBefore(beginningTime)) {
+
+document.querySelector("#changer7").style.backgroundColor = "green";
+
+} else if (moment().isBetween(beginningTime, endTime)) {
+
+document.querySelector("#changer7").style.backgroundColor = "red";
+
+}
+
+    
+};
+
+function change8 () {
+
+var beginningTime = moment({
+h:16
+});
+
+var endTime = moment({
+    h:17
+})
+
+if(moment().isAfter(endTime)) {
+
+document.querySelector("#changer8").style.backgroundColor = "grey";
+
+} else if (moment().isBefore(beginningTime)) {
+
+document.querySelector("#changer8").style.backgroundColor = "green";
+
+} else if (moment().isBetween(beginningTime, endTime)) {
+
+document.querySelector("#changer8").style.backgroundColor = "red";
+
+}
+
+    
+};
+
+function change9 () {
+
+var beginningTime = moment({
+h:17
+});
+
+var endTime = moment({
+    h:18
+})
+
+if(moment().isAfter(endTime)) {
+
+document.querySelector("#changer9").style.backgroundColor = "grey";
+
+} else if (moment().isBefore(beginningTime)) {
+
+document.querySelector("#changer9").style.backgroundColor = "green";
+
+} else if (moment().isBetween(beginningTime, endTime)) {
+
+document.querySelector("#changer9").style.backgroundColor = "red";
+
+}
+
+    
+};
+
+
+
+
+console.log(moment().isAfter("10:00:00:00"));
+console.log(moment().toDate().getTime());
 $('#button1').on('click', function() {
 
 var text1 = document.querySelector('#text1').value;
@@ -313,6 +532,18 @@ localStorage.setItem('key9', text9);
 
 
 function init(){
+
+    change1();
+    change2();
+    change3();
+    change4();
+    change5();
+    change6();
+    change7();
+    change8();
+    change9();
+
+
 
 
     document.querySelector('#text1').value = localStorage.getItem('key1');
