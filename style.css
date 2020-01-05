@@ -24,3 +24,10 @@ input {
 header {
     border-bottom: 10px solid black;
 }
+
+#timeHolder {
+    
+        display: flex;
+        justify-content: center;
+    }
+}

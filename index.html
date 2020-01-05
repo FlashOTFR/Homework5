@@ -21,7 +21,11 @@
 
     <h2 id='announce'>TODAY'S DATE</h2>
 
-    <div id='timeHolder'></div>
+    <div id='timeHolder'>
+
+        <h3 id='morrisDay'></h3>
+
+    </div>
 
 
 </header>
@@ -174,7 +178,7 @@
 
 
 
-
+<script src='moment.min.js'></script>
  <script src="https://code.jquery.com/jquery-3.4.1.js"
                                         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
                                         crossorigin="anonymous"></script>
@@ -184,11 +188,15 @@
     
 init();
     
-    
+var m = moment();
 
+var holder = document.querySelector('#timeHolder');
 
+var mo = JSON.stringify(m._d);
 
-
+var md = document.querySelector('#morrisDay');
+md.innerHTML = (mo);
+console.log(mo);
 
 $('#button1').on('click', function() {
 
