@@ -8,6 +8,7 @@ th, td, tr {
     display: flex;
     justify-content: center;
     margin: auto;
+    background-image: url("bg.jpeg");
 }
 
 #announce {
@@ -32,4 +33,3 @@ header {
         justify-content: center;
     }
 }
-
