@@ -33,6 +33,7 @@
 
 
 <container>
+  
     <table id='main'>
         <tr>
             <td>
@@ -169,7 +170,10 @@
             
         </tr>
     </table>
+</div>
+
 </container>
+
 
 
 
@@ -192,11 +196,11 @@ var m = moment();
 
 var holder = document.querySelector('#timeHolder');
 
-var mo = JSON.stringify(m._d);
-
 var md = document.querySelector('#morrisDay');
-md.innerHTML = (mo);
-console.log(mo);
+
+md.innerHTML = (m._d);
+
+console.log(m);
 
 $('#button1').on('click', function() {
 
