@@ -36,11 +36,11 @@
   
     <table id='main'>
         <tr>
-            <td>
+            <td id="changer1">
                 <p>9 AM</p>
             </td>
 
-            <td>
+            <td id="changer1">
                 <input type='text' id='text1'>
             </td>
 
@@ -51,26 +51,23 @@
         </tr>
 
         <tr>
-            <td>
+            <td id="changer2">
                 <p>10 AM</p>
             </td>
 
-            <td>
+            <td id="changer2">
                 <input type='text' id='text2'>
-            </td>
-
-            <td>
-                <button type="button" class="btn btn-primary" id='button2'>Save</button>
+            </td>   <button type="button" class="btn btn-primary" id='button2'>Save</button>
             </td>
             
         </tr>
 
         <tr>
-            <td>
+            <td id="changer3">
                 <p>11 AM</p>
             </td>
 
-            <td>
+            <td id="changer3">
                 <input type='text' id='text3'>
             </td>
 
@@ -81,11 +78,11 @@
         </tr>
 
         <tr>
-            <td>
+            <td id="changer4">
                 <p>12 PM</p>
             </td>
 
-            <td>
+            <td id="changer4">
                 <input type='text' id='text4'>
             </td>
 
@@ -96,11 +93,11 @@
         </tr>
 
         <tr>
-            <td>
+            <td id="changer5">
                 <p>1 PM</p>
             </td>
 
-            <td>
+            <td id="changer5">
                 <input type='text' id='text5'>
             </td>
 
@@ -111,11 +108,11 @@
         </tr>
 
         <tr>
-            <td>
+            <td id="changer6">
                 <p>2 PM</p>
             </td>
 
-            <td>
+            <td id="changer6">
                 <input type='text' id='text6'>
             </td>
 
@@ -126,11 +123,11 @@
         </tr>
 
         <tr>
-            <td>
+            <td id="changer7">
                 <p>3 PM</p>
             </td>
 
-            <td>
+            <td id="changer7">
                 <input type='text' id='text7'>
             </td>
 
@@ -141,11 +138,11 @@
         </tr>
 
         <tr>
-            <td>
+            <td id="changer8">
                 <p>4 PM</p>
             </td>
 
-            <td>
+            <td id="changer8">
                 <input type='text' id='text8'>
             </td>
 
@@ -156,11 +153,11 @@
         </tr>
 
         <tr>
-            <td>
+            <td id="changer9">
                 <p>5 PM</p>
             </td>
 
-            <td>
+            <td id="changer9">
                 <input type='text' id='text9'>
             </td>
 
@@ -194,11 +191,39 @@ init();
     
 var m = moment();
 
+var m9 = moment("09:00:00:00");
+
+var m10 = moment("10:00:00:00");
+
+var m11 = moment("11:00:00:00");
+
+var m12 = moment("12:00:00:00");
+
+var m1 = moment("13:00:00:00");
+
+var m2 = moment("14:00:00:00");
+
+var m3 = moment("15:00:00:00");
+
+var m4 = moment("16:00:00:00");
+
+var m5 = moment("17:00:00:00");
+
 var holder = document.querySelector('#timeHolder');
 
 var md = document.querySelector('#morrisDay');
 
 md.innerHTML = (m.format('dddd [,] MMMM Do YYYY'));
+
+function change1 () {
+
+    if(moment() > moment("09:00:00:00") || moment() < moment("10:00:00:00")) {
+
+        $
+
+    }
+
+}
 
 console.log(m);
 
@@ -281,7 +306,8 @@ var text9 = document.querySelector('#text9').value;
 localStorage.setItem('key9', text9);
 
 
-})                                    
+});                                    
+
 
 
 
