@@ -21,6 +21,8 @@
 
     <h2 id='announce'>TODAY'S DATE</h2>
 
+    <div id='timeHolder'></div>
+
 
 </header>
 
@@ -33,12 +35,12 @@
                 <p>9 AM</p>
             </td>
 
-            <td class='text'>
-                <input type='text'>
+            <td>
+                <input type='text' id='text1'>
             </td>
 
             <td>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-primary" id='button1'>Save</button>
             </td>
             
         </tr>
@@ -49,11 +51,11 @@
             </td>
 
             <td>
-                <input type='text'>
+                <input type='text' id='text2'>
             </td>
 
             <td>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-primary" id='button2'>Save</button>
             </td>
             
         </tr>
@@ -64,11 +66,11 @@
             </td>
 
             <td>
-                <input type='text'>
+                <input type='text' id='text3'>
             </td>
 
             <td>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-primary" id='button3'>Save</button>
             </td>
             
         </tr>
@@ -79,11 +81,11 @@
             </td>
 
             <td>
-                <input type='text'>
+                <input type='text' id='text4'>
             </td>
 
             <td>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-primary" id='button4'>Save</button>
             </td>
             
         </tr>
@@ -94,11 +96,11 @@
             </td>
 
             <td>
-                <input type='text'>
+                <input type='text' id='text5'>
             </td>
 
             <td>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-primary" id='button5'>Save</button>
             </td>
             
         </tr>
@@ -109,11 +111,11 @@
             </td>
 
             <td>
-                <input type='text'>
+                <input type='text' id='text6'>
             </td>
 
             <td>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-primary" id='button6'>Save</button>
             </td>
             
         </tr>
@@ -124,11 +126,11 @@
             </td>
 
             <td>
-                <input type='text'>
+                <input type='text' id='text7'>
             </td>
 
             <td>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-primary" id='button7'>Save</button>
             </td>
             
         </tr>
@@ -139,11 +141,11 @@
             </td>
 
             <td>
-                <input type='text'>
+                <input type='text' id='text8'>
             </td>
 
             <td>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-primary" id='button8'>Save</button>
             </td>
             
         </tr>
@@ -154,11 +156,11 @@
             </td>
 
             <td>
-                <input type='text'>
+                <input type='text' id='text9'>
             </td>
 
             <td>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-primary" id='button9'>Save</button>
             </td>
             
         </tr>
@@ -176,6 +178,118 @@
  <script src="https://code.jquery.com/jquery-3.4.1.js"
                                         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
                                         crossorigin="anonymous"></script>
+
+<script>
+    
+    
+init();
+    
+    
+
+
+
+
+
+$('#button1').on('click', function() {
+
+var text1 = document.querySelector('#text1').value;
+
+localStorage.setItem('key1', text1);
+
+
+})  
+
+$('#button2').on('click', function() {
+
+var text2 = document.querySelector('#text2').value;
+
+localStorage.setItem('key2', text2);
+
+
+})  
+
+$('#button3').on('click', function() {
+
+var text3 = document.querySelector('#text3').value;
+
+localStorage.setItem('key3', text3);
+
+
+})  
+
+$('#button4').on('click', function() {
+
+var text4 = document.querySelector('#text4').value;
+
+localStorage.setItem('key4', text4);
+
+
+})  
+
+$('#button5').on('click', function() {
+
+var text5 = document.querySelector('#text5').value;
+
+localStorage.setItem('key5', text5);
+
+
+})  
+
+$('#button6').on('click', function() {
+
+var text6 = document.querySelector('#text6').value;
+
+localStorage.setItem('key6', text6);
+
+
+})  
+
+$('#button7').on('click', function() {
+
+var text7 = document.querySelector('#text7').value;
+
+localStorage.setItem('key7', text7);
+
+
+})  
+
+$('#button8').on('click', function() {
+
+var text8 = document.querySelector('#text8').value;
+
+localStorage.setItem('key8', text8);
+
+
+})  
+
+$('#button9').on('click', function() {
+
+var text9 = document.querySelector('#text9').value;
+
+localStorage.setItem('key9', text9);
+
+
+})                                    
+
+
+
+
+function init(){
+
+
+    document.querySelector('#text1').value = localStorage.getItem('key1');
+    document.querySelector('#text2').value = localStorage.getItem('key2');
+    document.querySelector('#text3').value = localStorage.getItem('key3');
+    document.querySelector('#text4').value = localStorage.getItem('key4');
+    document.querySelector('#text5').value = localStorage.getItem('key5');
+    document.querySelector('#text6').value = localStorage.getItem('key6');
+    document.querySelector('#text7').value = localStorage.getItem('key7');
+    document.querySelector('#text8').value = localStorage.getItem('key8');
+    document.querySelector('#text9').value = localStorage.getItem('key9');
+
+
+}                
+</script>
 
 </body>
 
